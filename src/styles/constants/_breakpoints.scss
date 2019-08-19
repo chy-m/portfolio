@@ -1,0 +1,15 @@
+// breakpoints
+$medium-breakpoint: 760px;
+
+@mixin breakpoint($class) {
+  @if $class == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $class == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  }
+}
