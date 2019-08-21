@@ -1,5 +1,6 @@
 import React from 'react'
 // Packages
+import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
 import Header from '../components/header'
@@ -18,6 +19,11 @@ const IndexPage = () => {
   `)
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Chy Meng</title>
+        <link rel="canonical" href="https://chymeng.io/" />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <Work />
     </Layout>
