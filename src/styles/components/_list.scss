@@ -2,32 +2,46 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   height: auto;
-  margin: 15px 0;
-  .title {
-    h3 {
-      text-transform: uppercase;
-      font-weight: $regular;
-      color: $cream;
-      font-size: 22px;
-      margin: 0 auto 10px auto;
-      letter-spacing: 2px;
-    }
+  margin: 0 0 2.5em 0;
+  h3 {
+    margin: 0 0 1em 0;
+    color: $cream;
+    font-weight: $regular;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
   .items {
     display: flex;
     flex-direction: column;
-    p {
-      color: $cream;
-      text-transform: capitalize;
-      line-height: 40px;
-      margin: 0;
-      a {
+    align-items: center;
+    .item {
+      display: flex;
+      flex-direction: column;
+      margin: 0 0 1em 0;
+      .item__heading {
+        display: flex;
+        p {
+          margin: 0;
+          color: $cream;
+          text-transform: capitalize;
+          white-space: pre;
+        }
+        a {
+          width: fit-content;
+          color: $cream;
+          text-decoration: none;
+          padding-bottom: 2px;
+          border-bottom: 0.5px dotted #c2dce6;
+          &:hover {
+            color: $blue;
+            border-bottom: 0.5px dotted $blue;
+          }
+        }
+      }
+      small {
         color: $cream;
-        text-decoration: none;
-        padding-bottom: 2px;
-        border-bottom: 0.5px dotted #c2dce6;
+        text-align: center;
       }
     }
   }

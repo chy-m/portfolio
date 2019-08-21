@@ -1,21 +1,20 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from 'react'
+// Packages
+import PropTypes from 'prop-types'
 
-const List = ({ title, array, desc }) => (
+const List = ({ array, title }) => (
   <div className="list">
-    <div className="title">
-      <h3>{title}</h3>
-    </div>
+    <h3>{title}</h3>
     <div className="items">
-      {array.map(x => (
-        <div>
-          <p>
-            <a href={x.link} target="blank" rel="noopener noreferrer">
-              {x.name}
+      {array.map(item => (
+        <div className="item">
+          <div className="item__heading">
+            <a href={item.link} target="blank" rel="noopener noreferrer">
+              {item.title}
             </a>
-          </p>
-          {!desc ? <p>{x.desc}</p> : null}
+            {item.desc && <p>{`${' '}- ${item.desc}`}</p>}
+          </div>
+          <small>{item.secondaryTitle}</small>
         </div>
       ))}
     </div>
@@ -23,11 +22,13 @@ const List = ({ title, array, desc }) => (
 )
 
 List.propTypes = {
-  siteTitle: PropTypes.string,
+  array: PropTypes.array,
+  title: PropTypes.string,
 }
 
 List.defaultProps = {
-  siteTitle: ``,
+  array: [],
+  title: '',
 }
 
 export default List

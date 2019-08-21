@@ -2,7 +2,7 @@ import React from 'react'
 // Packages
 import Fade from 'react-reveal/Fade'
 // Components
-import Contact from './contact'
+import Social from './social'
 
 const Header = () => (
   <header className="header">
@@ -14,7 +14,7 @@ const Header = () => (
         <hr className="line" />
       </h1>
     </Fade>
-    <Contact />
+    <Social />
   </header>
 )
 
