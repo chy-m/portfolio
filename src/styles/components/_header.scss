@@ -6,11 +6,16 @@
   width: 90%;
   height: auto;
   margin: 50px auto 20px auto;
-  .line {
+  hr {
+    display: block;
     height: 1px;
     width: 100px;
-    border-top: 0.5px solid $light-pink;
+    border: 0;
+    background-color: $light-pink;
+    margin: 1em 0;
+    padding: 0;
   }
+
   h1 {
     font-weight: $light;
     color: $light-pink;

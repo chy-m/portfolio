@@ -1,19 +1,28 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
+import { Link } from 'gatsby'
 
-import Layout from "../components/layout"
-import Footer from "../components/footer"
-import List from "../components/list"
-import Image from "../components/image"
-import SEO from "../components/seo"
-import { projects, resume, work } from "../constants/Text"
+import Layout from '../components/layout'
+import List from '../components/list'
+import Image from '../components/image'
+import SEO from '../components/seo'
+import { projects, resume, work } from '../constants/content'
+import Fade from 'react-reveal/Fade'
 
 const IndexPage = () => (
   <Layout>
-    <Footer />
-    <List title={"work"} array={work} />
-    <List title={"projects"} array={projects} />
-    <List title={"resume"} array={resume} />
+    <Fade top cascade delay={1000}>
+      <ul>
+        <li>
+          <List title={'work'} array={work} />
+        </li>
+        <li>
+          <List title={'projects'} array={projects} />
+        </li>
+        <li>
+          <List title={'resume'} array={resume} />
+        </li>
+      </ul>
+    </Fade>
   </Layout>
 )
 
