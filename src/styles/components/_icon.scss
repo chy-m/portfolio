@@ -1,12 +1,23 @@
-a {
-  text-decoration: none;
-  margin: auto 10px;
-  .icon {
-    width: 25px;
-    height: 25px;
-    fill: $cream;
+.contact__me {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 350px;
+  height: 34px;
+  margin-bottom: 3em;
+  a {
+    width: 34px;
+    height: 34px;
+    text-decoration: none;
+    .icon {
+      width: 34px;
+      height: 34px;
+      fill: $cream;
+    }
     &:hover {
-      fill: $blue;
+      .icon {
+        fill: $blue;
+      }
     }
   }
 }

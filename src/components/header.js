@@ -9,14 +9,12 @@ const Header = () => (
     <Fade top>
       <h1>
         <hr className="line" />
-        My name is <span>Chy Meng</span>, a junior developer currently living
-        and working in Melbourne.
+        My name is <span>Chy Meng</span>, junior developer currently living and
+        working in Melbourne.
         <hr className="line" />
       </h1>
     </Fade>
-    <Fade top delay={700}>
-      <Contact />
-    </Fade>
+    <Contact />
   </header>
 )
 
