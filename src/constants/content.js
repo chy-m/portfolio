@@ -1,3 +1,5 @@
+import resumepdf from '../docs/resume.pdf'
+
 export const projects = [
   {
     title: 'Tanto Management System',
@@ -10,9 +12,8 @@ export const projects = [
 
 export const resume = [
   {
-    title: 'Click here',
-    link:
-      'https://docs.google.com/document/d/1c8Z2TrOlyta_JUkGm5dbFswwYH79kZIgkjLnrAc3ZH8/edit?usp=sharing',
+    title: 'View resume',
+    link: resumepdf,
   },
 ]
 
@@ -25,7 +26,7 @@ export const work = [
   },
   {
     title: '2ThinkNow',
-    secondaryTitle: 'Febraru 2018 - March 2018',
+    secondaryTitle: 'February 2018 - March 2018',
     link: 'https://2thinknow.com/',
     desc: 'intern',
   },

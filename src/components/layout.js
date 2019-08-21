@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -17,8 +10,7 @@ const Layout = ({ children }) => {
         style={{
           margin: `0 auto`,
           maxWidth: 960,
-          padding: `2rem 1.45rem`,
-          paddingTop: 0,
+          padding: `3em 1.45em`,
         }}
       >
         <main>{children}</main>

@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Chy Meng`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `Chy Meng`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -16,6 +16,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Chy portfolio`,
+        short_name: `portfolio`,
+        start_url: `/`,
+        background_color: `#1D1B1B`,
+        theme_color: `#FFC9D7`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      },
+    },
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {

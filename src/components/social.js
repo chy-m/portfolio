@@ -25,18 +25,7 @@ const Social = () => (
       >
         <Linkedin className="icon" />
       </a>
-      <a
-        href="https://www.instagram.com/chy.meng/"
-        target="blank"
-        rel="noopener noreferrer"
-      >
-        <Instagram className="icon" />
-      </a>
-      <a
-        href="mailto:chymeng24@gmail.com"
-        target="blank"
-        rel="noopener noreferrer"
-      >
+      <a href="mailto:chymeng24@gmail.com" rel="noopener noreferrer">
         <Mail className="icon" />
       </a>
       <a
@@ -45,6 +34,13 @@ const Social = () => (
         rel="noopener noreferrer"
       >
         <Codepen className="icon" />
+      </a>
+      <a
+        href="https://www.instagram.com/chy.meng/"
+        target="blank"
+        rel="noopener noreferrer"
+      >
+        <Instagram className="icon" />
       </a>
     </div>
   </Fade>
