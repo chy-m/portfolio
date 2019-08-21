@@ -1,0 +1,12 @@
+a {
+  text-decoration: none;
+  margin: auto 10px;
+  .icon {
+    width: 25px;
+    height: 25px;
+    fill: $cream;
+    &:hover {
+      fill: $blue;
+    }
+  }
+}

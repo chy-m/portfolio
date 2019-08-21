@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Contact from "./contact"
 
 const Header = ({ siteTitle }) => (
   <header className="head">
@@ -10,12 +11,7 @@ const Header = ({ siteTitle }) => (
       in Melbourne.
     </h1>
     <div className="line" />
-
-    {/* <div className="contact-me">
-      {contact.map(x => {
-        return <Svg icon={x.icon} a={x.a} />
-      })}
-    </div> */}
+    <Contact />
   </header>
 )
 
