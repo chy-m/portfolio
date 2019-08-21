@@ -1,16 +1,16 @@
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
-import Contact from './contact'
+// Packages
 import Fade from 'react-reveal/Fade'
+// Components
+import Contact from './contact'
 
-const Header = ({ siteTitle }) => (
-  <header className="head">
+const Header = () => (
+  <header className="header">
     <Fade top>
       <h1>
         <hr className="line" />
-        I’m <span>Chy Meng</span>, a junior developer currently living and
-        working in Melbourne.
+        My name is <span>Chy Meng</span>, a junior developer currently living
+        and working in Melbourne.
         <hr className="line" />
       </h1>
     </Fade>
@@ -19,13 +19,5 @@ const Header = ({ siteTitle }) => (
     </Fade>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
