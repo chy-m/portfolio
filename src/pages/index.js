@@ -3,7 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 // Components
-import Header from '../components/header'
+import Content from '../containers/Content'
 import Layout from '../components/layout'
 import Work from '../components/work'
 
@@ -24,8 +24,8 @@ const IndexPage = () => {
         <title>Chy Meng</title>
         <link rel="canonical" href="https://chymeng.io/" />
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Work />
+      <Content siteTitle={data.site.siteMetadata.title} />
+      {/* <Work /> */}
     </Layout>
   )
 }

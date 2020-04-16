@@ -1,12 +1,21 @@
 module.exports = {
   siteMetadata: {
     title: `Chy Meng`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Gatsby Portfolio`,
     author: `Chy Meng`,
   },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
+    },
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -18,7 +27,11 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Lato Sans'],
+          families: ['PT Sans'],
+        },
+        custom: {
+          families: ['Futura PT'],
+          urls: ['/fonts/fonts.css'],
         },
       },
     },

@@ -6,13 +6,7 @@ import './layout.scss'
 const Layout = ({ children }) => {
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `3em 1.45em`,
-        }}
-      >
+      <div>
         <main>{children}</main>
       </div>
     </>
