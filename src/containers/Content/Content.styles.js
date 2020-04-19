@@ -14,6 +14,7 @@ export const StyledContent = styled(animated.div)`
 `
 
 export const StyledTypography = styled(Typography)`
+  text-align: center;
   font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 6em;
