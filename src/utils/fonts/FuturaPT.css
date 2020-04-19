@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'Futura PT';
+  src: url('FuturaPT-Bold.eot');
+  src: local('Futura PT Bold'), local('FuturaPT-Bold'),
+    url('FuturaPT-Bold.eot?#iefix') format('embedded-opentype'),
+    url('FuturaPT-Bold.woff2') format('woff2'),
+    url('FuturaPT-Bold.woff') format('woff'),
+    url('FuturaPT-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('FuturaPT-Heavy.eot');
+  src: local('Futura PT Heavy'), local('FuturaPT-Heavy'),
+    url('FuturaPT-Heavy.eot?#iefix') format('embedded-opentype'),
+    url('FuturaPT-Heavy.woff2') format('woff2'),
+    url('FuturaPT-Heavy.woff') format('woff'),
+    url('FuturaPT-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT Extra';
+  src: url('FuturaPT-ExtraBold.eot');
+  src: local('Futura PT Extra Bold'), local('FuturaPT-ExtraBold'),
+    url('FuturaPT-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('FuturaPT-ExtraBold.woff2') format('woff2'),
+    url('FuturaPT-ExtraBold.woff') format('woff'),
+    url('FuturaPT-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('FuturaPT-Medium.eot');
+  src: local('Futura PT Medium'), local('FuturaPT-Medium'),
+    url('FuturaPT-Medium.eot?#iefix') format('embedded-opentype'),
+    url('FuturaPT-Medium.woff2') format('woff2'),
+    url('FuturaPT-Medium.woff') format('woff'),
+    url('FuturaPT-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura PT';
+  src: url('FuturaPT-Light.eot');
+  src: local('Futura PT Light'), local('FuturaPT-Light'),
+    url('FuturaPT-Light.eot?#iefix') format('embedded-opentype'),
+    url('FuturaPT-Light.woff2') format('woff2'),
+    url('FuturaPT-Light.woff') format('woff'),
+    url('FuturaPT-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}

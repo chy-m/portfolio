@@ -5,7 +5,6 @@ module.exports = {
     author: `Chy Meng`,
   },
   plugins: [
-    `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-material-ui`,
@@ -29,10 +28,6 @@ module.exports = {
         google: {
           families: ['PT Sans'],
         },
-        custom: {
-          families: ['Futura PT'],
-          urls: ['/fonts/fonts.css'],
-        },
       },
     },
     `gatsby-transformer-sharp`,
@@ -47,14 +42,6 @@ module.exports = {
         theme_color: `#FFC9D7`,
         display: `minimal-ui`,
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-react-svg',
-      options: {
-        rule: {
-          include: /images/,
-        },
       },
     },
     {

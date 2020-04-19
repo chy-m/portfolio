@@ -1,13 +1,15 @@
+@import '../utils/fonts/FuturaPT.css';
+
 html {
-  font-family: 'Futura PT', sans-serif;
+  font-family: 'Futura PT' sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
-  background-color: #000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #000;
 }
 article,
 aside,
@@ -41,7 +43,6 @@ template {
   display: none;
 }
 a {
-  font-family: 'Futura PT';
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
@@ -63,6 +64,8 @@ dfn {
   font-style: italic;
 }
 h1 {
+  font-family: 'Futura PT' sans-serif;
+  font-weight: 300;
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -71,7 +74,6 @@ mark {
   color: #000;
 }
 small {
-  font-family: 'Futura PT';
   font-size: 80%;
 }
 sub,
@@ -203,7 +205,8 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -233,8 +236,9 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
-  font-weight: bold;
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 500;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
   line-height: 1.1;
@@ -249,7 +253,8 @@ h2 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.62671rem;
@@ -265,7 +270,8 @@ h3 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1.38316rem;
@@ -281,7 +287,8 @@ h4 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 1rem;
@@ -297,7 +304,8 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.85028rem;
@@ -313,7 +321,8 @@ h6 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: 'Futura PT';
+  font-family: 'Futura PT', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
@@ -382,7 +391,6 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  font-family: 'Futura PT';
 }
 figure {
   margin-left: 0;
@@ -528,6 +536,9 @@ li > ul {
 blockquote *:last-child {
   margin-bottom: 0;
 }
+li *:last-child {
+  margin-bottom: 0;
+}
 p *:last-child {
   margin-bottom: 0;
 }
@@ -615,14 +626,3 @@ pre tt:after {
     font-size: 100%;
   }
 }
-
-// Constants
-@import '../styles/constants/breakpoints';
-@import '../styles/constants/colors';
-@import '../styles/constants/fonts';
-
-// Components
-@import '../styles/components/header';
-@import '../styles/components/icon';
-@import '../styles/components/list';
-@import '../styles/components/work';
