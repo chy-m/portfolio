@@ -2,12 +2,11 @@ import React from 'react'
 import { useSpring } from 'react-spring'
 import {
   StyledContent,
-  StyledTypography,
-  StyledSecondaryTypography,
   StyledUnorderedList,
   StyledListItem,
-  StyledLink,
 } from './Content.styles'
+import Typography from '../../components/Typography'
+import Link from '../../components/Link'
 
 const Content = () => {
   const fade = useSpring({
@@ -19,35 +18,30 @@ const Content = () => {
 
   return (
     <StyledContent style={fade}>
-      <StyledTypography>Hi I'm Chy Meng</StyledTypography>
-      <StyledSecondaryTypography>Frontend Developer.</StyledSecondaryTypography>
+      <Typography variant="h1" align="center">
+        Hi I'm Chy Meng
+      </Typography>
+      <Typography variant="h4" marginBottom="42px">
+        Frontend Developer.
+      </Typography>
       <StyledUnorderedList>
         <StyledListItem>
-          <StyledLink
+          <Link
             href="https://github.com/chy-m"
             target="blank"
             rel="noopener noreferrer"
           >
-            GITHUB
-          </StyledLink>
+            Github
+          </Link>
         </StyledListItem>
         <StyledListItem>
-          <StyledLink
+          <Link
             href="https://www.linkedin.com/in/chy-meng-6323b8a7/"
             target="blank"
             rel="noopener noreferrer"
           >
-            LINKEDIN
-          </StyledLink>
-        </StyledListItem>
-        <StyledListItem>
-          <StyledLink
-            href="https://www.instagram.com/chy.meng/"
-            target="blank"
-            rel="noopener noreferrer"
-          >
-            INSTAGRAM
-          </StyledLink>
+            LinkedIn
+          </Link>
         </StyledListItem>
       </StyledUnorderedList>
     </StyledContent>

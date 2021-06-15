@@ -1,24 +1,26 @@
 import React from 'react'
-import MuiTypography from '@material-ui/core/Typography'
+import { StyledTypography } from './Typography.style'
 
 export const Typography = ({
   variant,
   children,
-  color,
+  color = 'textPrimary',
   component,
   align,
+  marginBottom,
   ...restProps
 }) => {
   return (
-    <MuiTypography
+    <StyledTypography
       variant={variant}
       color={color}
       component={component}
       align={align}
+      $marginBottom={marginBottom}
       {...restProps}
     >
       {children}
-    </MuiTypography>
+    </StyledTypography>
   )
 }
 

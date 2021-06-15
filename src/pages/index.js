@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
+import ThemeProvider from '../components/ThemeProvider'
 import Content from '../containers/Content'
 import Layout from '../components/layout'
 
@@ -14,6 +15,7 @@ const IndexPage = () => {
       }
     }
   `)
+
   return (
     <Layout>
       <Helmet>
@@ -21,7 +23,9 @@ const IndexPage = () => {
         <title>Chy Meng</title>
         <link rel="canonical" href="https://chymeng.io/" />
       </Helmet>
-      <Content siteTitle={data.site.siteMetadata.title} />
+      <ThemeProvider>
+        <Content siteTitle={data.site.siteMetadata.title} />
+      </ThemeProvider>
     </Layout>
   )
 }
