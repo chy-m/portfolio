@@ -14,7 +14,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ['Circular Std', 'system-ui', 'sans-serif'],
+      sans: ['system-ui', 'sans-serif'],
     },
   },
   plugins: [],

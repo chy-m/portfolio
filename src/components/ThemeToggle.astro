@@ -30,6 +30,10 @@ import SunRay from "../components/SunRay.astro";
   toggle?.addEventListener("click", togglePreference);
 </script>
 <style is:global lang="scss">
+  $columns: 12;
+  $first-ray-child: 3;
+  $last-ray-child: 8;
+
   :root {
     --color-primary: #ffffff;
     --color-secondary: #eec413;
@@ -53,8 +57,7 @@ import SunRay from "../components/SunRay.astro";
       height: 120%;
       transition: 0.4s all, height 0.3s ease-in-out;
 
-      $columns: 12;
-      @for $i from 1 through $columns {
+      @for $i from $first-ray-child through $last-ray-child {
         &:nth-child(#{$i}) {
           transform: rotate(calc(#{$i} * calc(360deg / #{$columns})));
         }
@@ -63,9 +66,7 @@ import SunRay from "../components/SunRay.astro";
 
     &:hover {
       .sun-ray {
-        $columns: 12;
-
-        @for $i from 1 through $columns {
+        @for $i from $first-ray-child through $last-ray-child {
           &:nth-child(#{$i}) {
             transform: rotate(
               calc(calc(#{$i} * calc(360deg / #{$columns})) - 20deg)
@@ -90,8 +91,7 @@ import SunRay from "../components/SunRay.astro";
         height: 0;
         transition: 0.4s, transform 0.4s, height 0.2s 0.1s;
 
-        $columns: 12;
-        @for $i from 1 through $columns {
+        @for $i from $first-ray-child through $last-ray-child {
           &:nth-child(#{$i}) {
             transform: rotate(
               calc(calc(#{$i} * calc(360deg / #{$columns})) - 45deg)
