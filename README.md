@@ -7,6 +7,7 @@ Live site: https://chymeng.com/
 ## Setup
 
 Use Node.js 22.22.0 or newer and npm.
+The `.nvmrc` file selects the latest Node.js 22 release for nvm and Netlify builds.
 
 Browser support follows [Tailwind 4's requirements](https://tailwindcss.com/docs/upgrade-guide#browser-requirements):
 Safari 16.4+, Chrome 111+, and Firefox 128+.
@@ -27,6 +28,7 @@ npm run preview
 
 Deploy the generated `dist/` directory to a static hosting provider. Configure
 the provider to use Node.js 22.22.0 or newer and `npm run build`.
+Netlify reads the Node.js version from `.nvmrc`; its publish directory is `dist`.
 
 Run `npm test` for theme-selection regression tests and `npm audit` to check
 dependencies against the current vulnerability database.
