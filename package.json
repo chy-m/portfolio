@@ -2,19 +2,22 @@
   "name": "puffy-parsec",
   "type": "module",
   "version": "0.0.1",
+  "engines": {
+    "node": ">=22.22.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "test": "node --test",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.11.0",
-    "astro-compress": "^2.2.28",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.0",
     "sass": "^1.59.3",
-    "sharp": "^0.31.3",
-    "tailwindcss": "^3.2.7"
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
   }
 }

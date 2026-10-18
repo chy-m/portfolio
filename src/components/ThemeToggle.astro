@@ -2,8 +2,11 @@
 import SunRay from "../components/SunRay.astro";
 ---
 
-<div
-  class="toggle-theme-switch absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer"
+<button
+  type="button"
+  aria-label="Dark mode"
+  aria-pressed="false"
+  class="toggle-theme-switch absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lightBlack dark:focus-visible:outline-white"
 >
   <span
     class="moon absolute origin-right rounded-full top-0 right-0 w-7 h-7 z-10"
@@ -15,14 +18,16 @@ import SunRay from "../components/SunRay.astro";
   <SunRay />
   <SunRay />
   <SunRay />
-</div>
+</button>
 
 <script>
   import { togglePreference } from "../../lib/theme-util";
 
-  document
-    .querySelector(".toggle-theme-switch")
-    .addEventListener("click", togglePreference);
+  const toggle = document.querySelector(".toggle-theme-switch");
+  toggle?.setAttribute(
+    "aria-pressed", String(document.documentElement.dataset.theme === "dark")
+  );
+  toggle?.addEventListener("click", togglePreference);
 </script>
 <style is:global lang="scss">
   :root {
@@ -104,6 +109,14 @@ import SunRay from "../components/SunRay.astro";
 
     .moon {
       transform: scale(1) translate(11%, -11%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .toggle-theme-switch .sun-ray,
+    [data-theme="dark"] .toggle-theme-switch .sun-ray,
+    .toggle-theme-switch .moon {
+      transition: none;
     }
   }
 </style>
