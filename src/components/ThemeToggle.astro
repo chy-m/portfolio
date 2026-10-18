@@ -1,17 +1,18 @@
 ---
 import SunRay from "../components/SunRay.astro";
+import "../styles/theme-toggle.css";
 ---
 
 <button
   type="button"
   aria-label="Dark mode"
   aria-pressed="false"
-  class="toggle-theme-switch absolute top-4 right-4 flex items-center justify-center w-10 h-10 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-lightBlack dark:focus-visible:outline-white"
+  class="toggle-theme-switch"
 >
   <span
-    class="moon absolute origin-right rounded-full top-0 right-0 w-7 h-7 z-10"
+    class="moon"
   ></span>
-  <span class="sun w-10 h-10 rounded-full"></span>
+  <span class="sun"></span>
   <SunRay />
   <SunRay />
   <SunRay />
@@ -29,93 +30,3 @@ import SunRay from "../components/SunRay.astro";
   );
   toggle?.addEventListener("click", togglePreference);
 </script>
-<style is:global lang="scss">
-  $columns: 12;
-  $first-ray-child: 3;
-  $last-ray-child: 8;
-
-  :root {
-    --color-primary: var(--bg);
-    --color-secondary: #eec413;
-
-    &[data-theme="dark"] {
-      --color-secondary: #ffffff;
-    }
-  }
-
-  .toggle-theme-switch {
-    transform: translate(50%, -50%);
-
-    .sun {
-      background: var(--color-secondary);
-      border: 4px solid var(--color-primary);
-    }
-
-    .sun-ray {
-      background: var(--color-secondary);
-      height: 120%;
-      transition: 0.4s all, height 0.3s ease-in-out;
-
-      @for $i from $first-ray-child through $last-ray-child {
-        &:nth-child(#{$i}) {
-          transform: rotate(calc(#{$i} * calc(360deg / #{$columns})));
-        }
-      }
-    }
-
-    &:hover {
-      .sun-ray {
-        @for $i from $first-ray-child through $last-ray-child {
-          &:nth-child(#{$i}) {
-            transform: rotate(
-              calc(calc(#{$i} * calc(360deg / #{$columns})) - 20deg)
-            );
-          }
-        }
-      }
-    }
-
-    .moon {
-      background: var(--color-primary);
-      transform: scale(0) translate(25%, -25%);
-      transition: 0.4s transform;
-    }
-  }
-
-  [data-theme="dark"] {
-    .toggle-theme-switch {
-      background-color: var(--color-primary);
-
-      .sun-ray {
-        height: 0;
-        transition: 0.4s, transform 0.4s, height 0.2s 0.1s;
-
-        @for $i from $first-ray-child through $last-ray-child {
-          &:nth-child(#{$i}) {
-            transform: rotate(
-              calc(calc(#{$i} * calc(360deg / #{$columns})) - 45deg)
-            );
-          }
-        }
-      }
-    }
-
-    .toggle-theme-switch:hover {
-      .moon {
-        transform: scale(1) translate(-3%, -18%);
-      }
-    }
-
-    .moon {
-      transform: scale(1) translate(11%, -11%);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .toggle-theme-switch .sun-ray,
-    [data-theme="dark"] .toggle-theme-switch .sun-ray,
-    .toggle-theme-switch .moon {
-      transition: none;
-    }
-  }
-</style>
