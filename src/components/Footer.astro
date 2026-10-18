@@ -4,10 +4,13 @@ import Heart from "../components/Heart.astro";
 
 <footer class="sticky top-[100vh]">
   <div class="flex flex-wrap">
-    <p class="text-gray-600 dark:text-slate-100">© 2024 Made with</p>
+    <p>© <span id="year">{new Date().getFullYear()}</span> Made with</p>
     <Heart />
-    <p class="text-gray-600 dark:text-slate-100">
-      by Chy Meng. All rights reserved.
-    </p>
+    <p>by Chy Meng</p>
   </div>
 </footer>
+
+<script>
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+</script>

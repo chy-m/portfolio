@@ -6,17 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pink: '#FFA3AC',
-        darkPink: '#a62049',
-        purple: '#f9e0ff',
         lightBlack: '#0a0f1b',
-        lightPurple: '#dbc4fa',
-        contactPink: '#ffa6ae',
-        contactLilac: '#d9c2ff',
-        contactMint: '#9be0b4',
-        contactPinkLight: '#c2185b',
-        contactLilacLight: '#6d3fc0',
-        contactMintLight: '#1f8a4c',
       },
     },
     fontFamily: {

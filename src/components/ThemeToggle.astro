@@ -35,11 +35,10 @@ import SunRay from "../components/SunRay.astro";
   $last-ray-child: 8;
 
   :root {
-    --color-primary: #ffffff;
+    --color-primary: var(--bg);
     --color-secondary: #eec413;
 
     &[data-theme="dark"] {
-      --color-primary: #0a0f1b;
       --color-secondary: #ffffff;
     }
   }

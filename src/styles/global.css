@@ -1,47 +1,93 @@
 @import "tailwindcss";
 @config "../../tailwind.config.cjs";
 
+:root {
+  --bg: #0a0f1c;
+  --heading: #f4f5f8;
+  --body: #c9cdd8;
+  --muted: #7d8394;
+  --link: #ffa6ae;
+  --contact-lilac: #d9c2ff;
+  --contact-mint: #9be0b4;
+  --hl-name: #ffa6ae;
+  --hl-canva: #d9c2ff;
+  --hl-ink: #0a0f1c;
+  --avatar-bg: #fdebd0;
+  --heart: #f25f5f;
+  --heart-pulse: #f85e5e;
+}
+
+[data-theme="light"] {
+  --bg: #fbf9f6;
+  --heading: #14161c;
+  --body: #3a3f4b;
+  --muted: #6b7080;
+  --link: #c2185b;
+  --contact-lilac: #6d3fc0;
+  --contact-mint: #1f8a4c;
+  --hl-name: #ffa6ae;
+  --hl-canva: #e4d4ff;
+  --hl-ink: #14161c;
+  --avatar-bg: #fdebd0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--body);
+}
+
+h1, h2 {
+  color: var(--heading);
+}
+
+footer {
+  color: var(--muted);
+}
+
+.name-hl {
+  background: var(--hl-name);
+  color: var(--hl-ink);
+}
+
+.canva-hl {
+  background: var(--hl-canva);
+  color: var(--hl-ink);
+}
+
+.avatar {
+  background: var(--avatar-bg);
+}
+
 .wave {
   display: inline-block;
   transform-origin: 70% 75%;
-  animation: wave 1.8s ease-in-out 2;
-}
-
-.wave:hover {
-  animation-iteration-count: infinite;
 }
 
 @keyframes wave {
-  0%, 60%, 100% {
+  0%, 100% {
     transform: rotate(0);
   }
 
-  10% {
+  20% {
     transform: rotate(18deg);
   }
 
-  20% {
+  40% {
     transform: rotate(-10deg);
   }
 
-  30% {
+  60% {
     transform: rotate(16deg);
   }
 
-  40% {
+  80% {
     transform: rotate(-6deg);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .wave {
-    animation: none;
   }
 }
 
 .contact a {
   display: inline-block;
-  color: inherit;
+  color: var(--link);
   text-decoration: underline wavy transparent;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 5px;
@@ -49,27 +95,15 @@
 }
 
 .contact a[data-c="pink"] {
-  --contact-color: theme("colors.contactPink");
+  --contact-color: var(--link);
 }
 
 .contact a[data-c="lilac"] {
-  --contact-color: theme("colors.contactLilac");
+  --contact-color: var(--contact-lilac);
 }
 
 .contact a[data-c="mint"] {
-  --contact-color: theme("colors.contactMint");
-}
-
-[data-theme="light"] .contact a[data-c="pink"] {
-  --contact-color: theme("colors.contactPinkLight");
-}
-
-[data-theme="light"] .contact a[data-c="lilac"] {
-  --contact-color: theme("colors.contactLilacLight");
-}
-
-[data-theme="light"] .contact a[data-c="mint"] {
-  --contact-color: theme("colors.contactMintLight");
+  --contact-color: var(--contact-mint);
 }
 
 .contact a:hover,
@@ -79,6 +113,10 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  .wave:hover {
+    animation: wave 0.9s ease-in-out;
+  }
+
   .contact a {
     transition: color 0.2s, text-decoration-color 0.2s, transform 0.2s;
   }
